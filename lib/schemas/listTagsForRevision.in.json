@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "path": {
+            "required": false,
+            "type": "string"
+        },
+        "revision": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

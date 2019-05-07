@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "path": {
+            "required": false,
+            "type": "string"
+        },
+        "start": {
+            "required": false,
+            "type": "string"
+        },
+        "end": {
+            "required": false,
+            "type": "string"
+        },
+        "maxReturn": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

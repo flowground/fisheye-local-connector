@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "query": {
+            "required": false,
+            "type": "string"
+        },
+        "repository": {
+            "required": false,
+            "type": "string"
+        },
+        "expand": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

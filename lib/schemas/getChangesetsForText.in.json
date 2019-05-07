@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "rep": {
+            "required": false,
+            "type": "string"
+        },
+        "path": {
+            "required": false,
+            "type": "string"
+        },
+        "committer": {
+            "required": false,
+            "type": "string"
+        },
+        "comment": {
+            "required": false,
+            "type": "string"
+        },
+        "p4JobFixed": {
+            "required": false,
+            "type": "string"
+        },
+        "expand": {
+            "required": false,
+            "type": "string"
+        },
+        "beforeCsid": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

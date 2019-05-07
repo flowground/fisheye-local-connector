@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "csid": {
+            "required": true,
+            "type": "string"
+        },
+        "repository": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,302 @@
+{
+    "title": "FishEye",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/fisheye.local/1.0.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://fisheye.local/context/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "getChangesetsForText": {
+            "main": "./lib/actions/getChangesetsForText.js",
+            "title": "List of changesets from a repository.",
+            "description": "List of changesets from a repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getChangesetsForText.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getChangesetDetails": {
+            "main": "./lib/actions/getChangesetDetails.js",
+            "title": "Retrieves detailed information about a set of changesets in a repository, designed to be used with the FishEye commit graph",
+            "description": "Retrieves detailed information about a set of changesets in a repository, designed to be used with the FishEye commit graph",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getChangesetDetails.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "findSliceData": {
+            "main": "./lib/actions/findSliceData.js",
+            "title": "finds slice data the query",
+            "description": "finds slice data the query",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/findSliceData.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getAllRepositories": {
+            "main": "./lib/actions/getAllRepositories.js",
+            "title": "List all the repositories.",
+            "description": "List all the repositories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getAllRepositories.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRepositoryInfo": {
+            "main": "./lib/actions/getRepositoryInfo.js",
+            "title": "Get the information about a repository.",
+            "description": "Get the information about a repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRepositoryInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getChangeset": {
+            "main": "./lib/actions/getChangeset.js",
+            "title": "getChangeset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getChangeset.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listChangesets": {
+            "main": "./lib/actions/listChangesets.js",
+            "title": "Get a list of changesets on a repository.",
+            "description": "Get a list of changesets on a repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listChangesets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listPathHistory": {
+            "main": "./lib/actions/listPathHistory.js",
+            "title": "Get a list of the file revisions for a specific path.",
+            "description": "Get a list of the file revisions for a specific path.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listPathHistory.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getPathList": {
+            "main": "./lib/actions/getPathList.js",
+            "title": "Get a list of information about files and directories in a path.",
+            "description": "Get a list of information about files and directories in a path.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getPathList.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getRevisionInfo": {
+            "main": "./lib/actions/getRevisionInfo.js",
+            "title": "getRevisionInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getRevisionInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "listTagsForRevision": {
+            "main": "./lib/actions/listTagsForRevision.js",
+            "title": "listTagsForRevision",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/listTagsForRevision.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getCrossRepositoryQuery": {
+            "main": "./lib/actions/getCrossRepositoryQuery.js",
+            "title": "Execute a query across repositories. By default, this will search all repositories.",
+            "description": "Execute a query across repositories. By default, this will search all repositories.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getCrossRepositoryQuery.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getQuery": {
+            "main": "./lib/actions/getQuery.js",
+            "title": "Execute a FishEye query against a specific repository.",
+            "description": "Execute a FishEye query against a specific repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getQuery.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getQueryAsRows": {
+            "main": "./lib/actions/getQueryAsRows.js",
+            "title": "Execute a FishEye query (that contains a \"return\" statement) against a specific repository.",
+            "description": "Execute a FishEye query (that contains a \"return\" statement) against a specific repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getQueryAsRows.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getReviewsForChangeset": {
+            "main": "./lib/actions/getReviewsForChangeset.js",
+            "title": "Retrieve a list of reviews for a changeset in a given repository.",
+            "description": "Retrieve a list of reviews for a changeset in a given repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getReviewsForChangeset.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "getReviewsForChangesets": {
+            "main": "./lib/actions/getReviewsForChangesets.js",
+            "title": "Retrieve a list of reviews for each given changeset in a given repository.",
+            "description": "Retrieve a list of reviews for each given changeset in a given repository.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/getReviewsForChangesets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
